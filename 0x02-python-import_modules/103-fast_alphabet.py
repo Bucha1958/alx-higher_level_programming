@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-from alpha_file import abc
-abc()
+import string
+print(string.ascii_uppercase)
