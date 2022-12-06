@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-common_elements = __import__('3-common_elements').common_elements
+only_diff_elements = __import__('4-only_diff_elements').only_diff_elements
 
 set_1 = {"python", "C", "Javascript"}
 set_2 = {"Bash", "C", "Ruby", "Perl"}
-c_set = common_elements(set_1, set_2)
+c_set = only_diff_elements(set_1, set_2)
 print(c_set)
+
 
 
