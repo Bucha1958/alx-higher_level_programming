@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-only_diff_elements = __import__('4-only_diff_elements').only_diff_elements
+number_keys = __import__('5-number_keys').number_keys
 
-set_1 = {"python", "C", "Javascript"}
-set_2 = {"Bash", "C", "Ruby", "Perl"}
-c_set = only_diff_elements(set_1, set_2)
-print(c_set)
+a_dictionary = {'language': "C", 'number': 13, 'track': "Low level"}
+nb_keys = number_keys(a_dictionary)
+print("Number of keys: {}".format(nb_keys))
 
 
 
