@@ -5,4 +5,3 @@ def uniq_add(my_list=[]):
     for count in new_list:
         sum_total += count
     return sum_total
-    
