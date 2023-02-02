@@ -1,0 +1,15 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+Check for the first argument passed to the function which must be a string
+>>> say_my_name(9, "White")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+Check the second argument which must be string
+>>> say_my_name("Bob", 3)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
