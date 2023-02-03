@@ -38,12 +38,6 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_integer([1, 1, 1, 1]), 1)
 
-    def test_no_ints(self):
-        """
-            Testing with values in the list that are not integers
-        """
-        with self.assertRaises(max_integer(TypeError):
-                max_integer([1, "hello", 2, 4])
 
     def test_only_negatives(self):
         """
