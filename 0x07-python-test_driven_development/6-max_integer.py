@@ -4,13 +4,13 @@
 """
 
 
-def max_integer(list=[]):
-    if len(list) == 0:
+def max_integer(my_list=[]):
+    if len(my_list) == 0:
         return None
-    result = list[0]
+    result = my_list[0]
     i = 1
-    while i < len(list):
-        if list[i] > result:
-            result = list[i]
+    while i < len(my_list):
+        if my_list[i] > result:
+            result = my_list[i]
         i += 1
     return result
