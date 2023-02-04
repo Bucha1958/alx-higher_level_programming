@@ -1,4 +1,4 @@
-#!/usr/bin/python3  
+#!/usr/bin/python3
 """
     No importation of module
 """
@@ -30,4 +30,4 @@ def matrix_mul(m_a, m_b):
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     return ([[sum(a*b for a, b in
-                zip(colA, colB)) for colB in zip(*m_b)] for colA in m_a])
+            zip(colA, colB)) for colB in zip(*m_b)] for colA in m_a])
