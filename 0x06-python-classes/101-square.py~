@@ -1,0 +1,83 @@
+#!/usr/bin/python3
+"""
+No module in this file
+"""
+
+
+
+class Square():
+    """
+    class that defines a square
+    """
+
+    def __init__(self, size=0, position=(0, 0)):
+        """
+        Instantiation
+        """
+
+        self.__size = size
+        self.__position = position
+
+    @property
+    def size(self):
+        """
+        property getter
+        """
+
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
+        property setter
+        """
+
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if (value < 0):
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+    @property
+    def position(self):
+        """
+        position getter
+        """
+
+        return self.__postion
+
+    @position.setter
+    def position(self, value):
+        """
+        position setter
+        """
+
+        if not isinstance(value, tuple) or isinstance(value[0], int) or isinstance(value[1], int) or len(value) == 2:
+            raise TypeError("position must be a tuple of two positive integers")
+
+        self.__position = value
+
+    def area(self):
+        """
+        public instance method that returns the current square area
+        """
+
+        return self.__size ** 2
+
+    def my_print(self):
+        """
+        public instance method that prints in stdout
+        """
+
+        if self.__size == 0:
+            return ""
+        for x in range(self.position[1]):
+            print()
+        for y in range(self.size):
+            if self.position[0]:
+                print(" " * self.position[0], end='')
+            print("#" * self.size, end='')
+            print()
+
+    def __str__(self):
+        return self.my_print()
