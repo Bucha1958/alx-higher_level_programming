@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+def lookup(obj):
+    my_list = []
+    for i in range(len(obj)):
+        my_list += obj
+    return my_list
