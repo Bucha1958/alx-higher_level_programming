@@ -9,7 +9,8 @@ class MyList():
     Class MyList inherits from the class list
     """
 
-    def __init__(self):
-        pass
     def print_sorted(self):
+        """
+        The method prints the sorted lists
+        """
         print(sorted(self))
