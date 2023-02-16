@@ -96,3 +96,18 @@ class Rectangle(Base):
         """
         self.validator_setter("y", value)
         self.__y = value
+
+    def area(self):
+        """
+            Public method that returns the area value of rectangle
+        """
+        return (self.__width * self.__height)
+
+    def display(self):
+        """
+            Public method  that prints in stdout the Rectangle.
+        """
+        for x in range(self.height):
+            for y in range(self.width):
+                print("#", end="")
+            print()
