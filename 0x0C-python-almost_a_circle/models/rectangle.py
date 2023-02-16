@@ -29,10 +29,13 @@ class Rectangle(Base):
         """
         This my method validates all the setters in the file
         """
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError(name+ " must be an integer")
-        if value < 0:
-            raise ValueError(name+" must be >= 0")
+        if name == 'x' or name == 'y':
+            if value < 0:
+                raise ValueError(name+ " must be >= 0")
+        elif value <= 0:
+            raise ValueError(name+" must be > 0")
 
     @property
     def width(self):
