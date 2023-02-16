@@ -3,12 +3,14 @@
     This file will contain the base class of all other classes in this project
 """
 
+
 class Base():
     """
         Base class created
     """
 
     __nb_objects = 0
+
     def __init__(self, id=None):
         """
             Instantiation initialized
