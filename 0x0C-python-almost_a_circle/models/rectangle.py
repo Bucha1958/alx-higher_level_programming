@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This file will contain a class called rectangle that will inherits from Base class.
+class called rectangle that will inherits from Base class.
 """
 
 from models.base import Base
@@ -13,7 +13,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Class constructor called instance attribute which contains parameters like
+        instance attribute which contains parameters like
         __width -> width
         __height -> height
         __x -> x
@@ -30,10 +30,10 @@ class Rectangle(Base):
         This my method validates all the setters in the file
         """
         if type(value) != int:
-            raise TypeError(name+ " must be an integer")
+            raise TypeError(name + " must be an integer")
         if name == 'x' or name == 'y':
             if value < 0:
-                raise ValueError(name+ " must be >= 0")
+                raise ValueError(name + " must be >= 0")
         elif value <= 0:
             raise ValueError(name+" must be > 0")
 
