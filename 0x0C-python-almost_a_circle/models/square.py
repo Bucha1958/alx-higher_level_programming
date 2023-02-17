@@ -15,6 +15,8 @@ class Square(Rectangle):
             Init function called which must inherits from the super class
         """
         super().__init__(size, size, x, y, id)
+        self.validator_setter("size", size)
+        self.size = size
 
     @property
     def size(self):
