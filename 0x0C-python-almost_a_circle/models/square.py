@@ -28,6 +28,7 @@ class Square(Rectangle):
         """
             Setter method
         """
+        self.validator_setter("width", value)
         self.width = value
         self.height = value
 
