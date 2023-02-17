@@ -131,6 +131,18 @@ class Rectangle(Base):
             rectangle += (" " * self.x) + ("#" * self.width) + "\n"
         print(rectangle, end="")
 
+    def to_dictionary(self):
+        """
+            Public method that returns the dictionary representation of Rectangle
+        """
+        dictionary = {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
+        return (dictionary)
+
     def __str__(self):
         """
             Magic method that represents the class object as a string

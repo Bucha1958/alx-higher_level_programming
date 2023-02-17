@@ -47,6 +47,13 @@ class Square(Rectangle):
                 if hasattr(self, key):
                     self.__setattr__(key, val)
 
+    def to_dictionary(self):
+        """
+            Function returns the dictionary representation
+        """
+        dic = {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
+        return (dic)
+
     def __str__(self):
         """
             It prints the string representation of instance object
