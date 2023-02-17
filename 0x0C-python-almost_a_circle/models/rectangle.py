@@ -37,17 +37,22 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError(name+" must be > 0")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
             public method that assigns an argument to each attribute
         """
         key = ('id', 'width', 'height', 'x', 'y')
 
-        if (args):
+        if (args) and len(args) != 0:
             i = 0
             for arg in args:
                 self.__setattr__(key[i], arg)
                 i += 1
+        else:
+            if (kwargs):
+                for key, val in kwargs.items():
+                    if hasattr(self, key):
+                        setattr(self, key, val)
 
 
     @property
