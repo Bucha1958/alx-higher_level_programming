@@ -107,7 +107,13 @@ class Rectangle(Base):
         """
             Public method  that prints in stdout the Rectangle.
         """
+        for a in range(self.y):
+            for b in range(self.x):
+                print(" ", end="")
+            print()
         for x in range(self.height):
+            for v in range(self.y):
+                print(" ", end="")
             for y in range(self.width):
                 print("#", end="")
             print()
