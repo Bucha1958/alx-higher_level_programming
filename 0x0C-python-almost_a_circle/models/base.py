@@ -54,6 +54,7 @@ class Base():
             with open(cls.__name__ + ".json", mode="w") as my_file:
                 my_file.write(cls.to_json_string([x.to_dictionary() for x in list_objs]))
 
+<<<<<<< HEAD
     @classmethod
     def create(cls, **dictionary):
         """
@@ -88,3 +89,4 @@ class Base():
             tmp = cls.create(**content)
         instances.append(tmp)
         return instances
+
