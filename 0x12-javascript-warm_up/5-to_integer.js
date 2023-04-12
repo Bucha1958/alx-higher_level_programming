@@ -2,13 +2,18 @@
 const process = require("process");
 let args = process.argv;
 let myVal = parseInt(args[2]);
-if (args.length < 3) {
+if (args.length < 3)
+{
 	console.log("Not a number");
-} else {
+}
+else
+{
 	if (myVal)
 	{
 		console.log("My number:" + myVal);
-	} else {
+	}
+	else
+	{
 		console.log("Not a number");
 	}
 }
