@@ -10,7 +10,7 @@ else
 {
 	if (myVal)
 	{
-		console.log("My number:" + myVal);
+		console.log("My number: " + myVal);
 	}
 	else
 	{
