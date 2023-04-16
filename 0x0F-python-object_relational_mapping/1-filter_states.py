@@ -12,11 +12,9 @@ else:
                             port=3306,
                             charset="utf8")
     current = conn.cursor()
-    current.execute("SELECT * FROM `states`\
-                    WHERE `name` REGEXP '^N' ORDER BY `id` ASC")
+    current.execute("SELECT * FROM states")
     results = current.fetchall()
     for result in results:
-        if ("N" in result[1]):
+        if (result[1][0] == "N"):
             print(result)
-    current.close()
     conn.close()
