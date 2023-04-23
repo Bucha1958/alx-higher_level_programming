@@ -1,7 +1,11 @@
+#!/usr/bin/python3
+"""
+    Module to print the values of state
+"""
+
 from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-import sqlalchemy
 from sqlalchemy import create_engine
 
 if __name__ == "__main__":
