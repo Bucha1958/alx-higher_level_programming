@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State).filter_by(name=argv[4]).order_by(State.id).all())
+    results = session.query(State).filter_by(name=argv[4]).order_by(State.id).all()
     if len(results) == 0:
         print("Not found")
     for item in results:
