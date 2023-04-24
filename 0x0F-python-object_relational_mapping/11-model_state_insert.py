@@ -10,10 +10,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
     Session = sessionmake(bind=engine)
     session = Session()
-    state = State()
-    state.name = "Louisiana"
+    state = State(name="Louisiana")
     session.add(state)
     session.commit()
-    results = session.query(State).filter_by(state.name).first()
+    results = session.query(State).filter_by(name="Louisiana").first()
     for result in results:
         print("{}".format(result.id))
