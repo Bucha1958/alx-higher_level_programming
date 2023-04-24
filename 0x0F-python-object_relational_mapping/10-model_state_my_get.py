@@ -14,5 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     results = session.query(State).filter_by(name=argv[4]).order_by(State.id).all())
+    if len(results) == 0:
+        print("Not found")
     for item in results:
         print("{}".format(item.id))
