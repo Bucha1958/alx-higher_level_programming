@@ -13,6 +13,8 @@ def print_states(username, password, db_name):
     outputs = cursor.fetchall()
     for output in outputs:
         print(output)
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
     credentials = argv
@@ -20,4 +22,4 @@ if __name__ == "__main__":
     passwd = argv[2]
     db_name = argv[3]
     print_states(username, passwd, db_name)
-
+    
