@@ -11,10 +11,9 @@ if __name__ == "__main__":
     Session = sessionmake(bind=engine)
     session = Session()
     state = State()
-    state.id = 6
     state.name = "Louisiana"
     session.add(state)
     session.commit()
-    results = session.query(State).order_by(State.id).all()
+    results = session.query(State).filter_by(state.name).first()
     for result in results:
         print("{}".format(result.id))
