@@ -33,7 +33,7 @@ class State(Base):
 #   engine = create_engine('mysql+mysqldb://root:St@nOk0rie_22@localhost:3306/hbtn_0e_6_usa', pool_pre_ping=True)
 #   Base.metadata.create_all(engine) 
 if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://root:St@nley_22@127.0.0.1:3306/hbtn_0e_6_usa", echo=True)
+    engine = create_engine("sqlite:///hbtn_0e_4_usa", echo=True)
     Base.metadata.create_all(bind=engine)
 
     Session = sessionmaker(bind=engine)
@@ -46,4 +46,7 @@ if __name__ == "__main__":
     s2 = State(34, "Nevada")
     session.add(s1)
     session.add(s2)
-    session.commit() 
+    session.commit()
+
+    results = session.query(State).all()
+    print(results)
