@@ -1,7 +1,15 @@
-#!/usr/bin/pythpn3
+#!/usr/bin/python3
 import hidden_4
 
-if __name__ == "__main__":
-    for d in dir(hidden_4):
-        if "__"not in d:
-            print(d)
+
+def print_defined_names():
+    names = []
+    for name in dir(hidden_4):
+        if not name.startswith("__"):
+            names.append(name)
+
+    for name in sorted(names):
+        print(name)
+
+
+print_defined_names()
